@@ -18,9 +18,9 @@ class ActivityFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'created_date' => now(),
-            'completed_date' => null,
-            'is_completed' => $this->faker->randomElement([true, false]),
+            'description' => '',
+            'completed_date' => '',
+            'is_completed' => false,
             'user_id' => null
         ];
     }
