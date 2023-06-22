@@ -18,8 +18,8 @@ class ActivityFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'description' => '',
-            'completed_date' => '',
+            'description' => null,
+            'completed_date' => null,
             'is_completed' => false,
             'user_id' => null
         ];
