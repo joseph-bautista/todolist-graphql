@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,7 +22,7 @@ class ActivityFactory extends Factory
             'description' => null,
             'completed_date' => null,
             'is_completed' => false,
-            'user_id' => null
+            'user_id' => User::all()->random()->id,
         ];
     }
 }
