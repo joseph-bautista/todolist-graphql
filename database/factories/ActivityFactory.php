@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,10 +19,10 @@ class ActivityFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'created_date' => now(),
+            'description' => null,
             'completed_date' => null,
-            'is_completed' => $this->faker->randomElement([true, false]),
-            'user_id' => null
+            'is_completed' => false,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }

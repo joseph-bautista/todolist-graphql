@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('activities', function (Blueprint $table) {
-            $table->id();
-            $table->string("name");
-            $table->dateTime("completed_date")->nullable();
-            $table->boolean("is_completed")->default(0);
-            $table->foreignId("user_id")->nullable();
-            $table->timestamps();
+        Schema::table('activities', function (Blueprint $table) {
+            $table->string('description')->after('name')->nullable();
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activities');
+        Schema::table('activities', function (Blueprint $table) {
+            //
+        });
     }
 };
