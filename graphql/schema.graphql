@@ -69,17 +69,19 @@ type Mutation {
 
   createActivity(
     name: String
-    email: String
-    password: String
-    role: String
+    description: String
+    completed_date: DateTime
+    is_completed: String
+    user_id: ID
   ): Activity! @create
 
   updateActivity(
     id: ID! @whereKey
     name: String
-    email: String
-    password: String
-    role: String
+    description: String
+    completed_date: DateTime
+    is_completed: String
+    user_id: ID
   ): Activity! @update
 
   deleteActivity(
