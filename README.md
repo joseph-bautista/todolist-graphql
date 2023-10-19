@@ -1,5 +1,5 @@
-# cmtodolist
-A take home exam for Codemode Application
+# To Do List App
+A simple to do list app for me to learn GraphQL
 
 Steps in setting up on your local machine:
 1. Open the terminal and run "git clone https://github.com/joseph-bautista/cmtodolist.git"
